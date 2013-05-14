@@ -20,8 +20,8 @@ public class Test extends TestCase {
         List<Map<String,Object>> children=yaml.getAs("children",List.class);
         System.out.println(children);
 
-        Map<String,Object> firstChildren=yaml.getAs("children[0]",Map.class);
-        System.out.println(firstChildren.get("name"));
+        Map<String,Object> firstChild=yaml.getAs("children[0]",Map.class);
+        System.out.println(firstChild.get("name"));
 
     }
 }

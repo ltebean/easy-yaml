@@ -23,7 +23,7 @@ In the java code, you can use ognl expression to access the properties defined i
     String name = yaml.getAs("name",String.class);
     String spouseName = yaml.getAs("spouse.name",String.class);
     List<Map<String,Object>> children = yaml.getAs("children",List.class);
-    Map<String,Object> firstChildren = yaml.getAs("children[0]",Map.class);
+    Map<String,Object> firstChild = yaml.getAs("children[0]",Map.class);
 
 
 
