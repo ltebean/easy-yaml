@@ -15,12 +15,12 @@ public class Test extends TestCase {
         InputStream input = this.getClass().getResourceAsStream("/test.yaml");
         Yaml yaml=new Yaml(input);
 
-        System.out.println(yaml.getAs("spouse.name",String.class));
+        System.out.println(yaml.get("spouse.name",String.class));
 
-        List<Map<String,Object>> children=yaml.getAs("children",List.class);
+        List<Map<String,Object>> children=yaml.get("children",List.class);
         System.out.println(children);
 
-        Map<String,Object> firstChild=yaml.getAs("children[0]",Map.class);
+        Map<String,Object> firstChild=yaml.get ("children[0]",Map.class);
         System.out.println(firstChild.get("name"));
 
     }

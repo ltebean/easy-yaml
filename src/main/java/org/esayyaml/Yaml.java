@@ -38,7 +38,7 @@ public class Yaml {
         }
     }
 
-    public <T> T getAs(String expression,Class<T> clazz){
+    public <T> T get(String expression,Class<T> clazz){
         return (T) getConfig(expression);
     }
 
