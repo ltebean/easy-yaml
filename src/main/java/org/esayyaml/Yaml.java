@@ -29,17 +29,13 @@ public class Yaml {
         config=yaml.load(string);
     }
 
-    private  Object getConfig(String expression){
+    public <T> T get(String expression,Class<T> clazz){
         try {
             final Object ognlTree = Ognl.parseExpression(expression);
-            return  Ognl.getValue(ognlTree, config);
+            return (T) Ognl.getValue(ognlTree, config, clazz);
         } catch (OgnlException e) {
             throw new RuntimeException("falied to get config with expression: "+expression,e);
         }
-    }
-
-    public <T> T get(String expression,Class<T> clazz){
-        return (T) getConfig(expression);
     }
 
 }

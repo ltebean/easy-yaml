@@ -1,5 +1,5 @@
 
-easy-yaml provides an easy-to-use api to access the yaml configuraion.
+easy-yaml provides an easy-to-use api to access the yaml configuraion, the config will be parsed as a combination of List and Map.
 
 ###Example:
 
