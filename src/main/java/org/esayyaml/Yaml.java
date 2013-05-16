@@ -38,4 +38,12 @@ public class Yaml {
         }
     }
 
+    public <T> T get(String expression, T defaultValue, Class<T> clazz){
+        try {
+            T value=get(expression,clazz);
+            return value!=null?value:defaultValue;
+        } catch(Exception e) {
+            return defaultValue;
+        }
+    }
 }
